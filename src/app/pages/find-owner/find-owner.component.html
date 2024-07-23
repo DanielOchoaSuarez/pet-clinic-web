@@ -3,7 +3,6 @@
   <div class="card-body">
     <mat-card-content>
       <mat-card>
-
         <mat-card-header>
           <mat-card-title>
             <h1>Find Owner</h1>
@@ -16,16 +15,16 @@
               <div class="form-row">
 
                 <div class="row">
-                  <mat-form-field appearance="outline" class="col-sm-2">
+                  <mat-form-field appearance="outline" class="col-sm-6">
                     <mat-label>Last name</mat-label>
                     <input matInput formControlName="lastName">
                     <mat-error *ngIf="findOwnerForm?.get('lastName')?.hasError('required')">
-                      {{ getErrorMsg(findOwnerForm.get('lastName')) }}
+                      {{ getErrorMsg('lastName') }}
                     </mat-error>
                   </mat-form-field>
                 </div>
 
-                <div style="display: flex; justify-content: flex-end;">
+                <div class="button-container">
                   <button mat-raised-button color="primary">Find Owner</button>
                 </div>
 

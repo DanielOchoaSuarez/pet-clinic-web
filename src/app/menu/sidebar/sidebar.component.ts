@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class SidebarComponent {
   listItems = [
     { label: 'Home', icon: 'home', path: '/' },
-    { label: 'Add Owner', icon: 'account_box', path: '/add-owner' },
     { label: 'Find Owner', icon: 'image_search', path: '/find-owner' },
+    { label: 'Add Owner', icon: 'account_box', path: '/add-owner' },
   ];
 }

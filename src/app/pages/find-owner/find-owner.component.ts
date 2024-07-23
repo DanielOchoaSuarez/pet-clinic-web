@@ -25,10 +25,15 @@ export class FindOwnerComponent implements OnInit {
     }
   }
 
-  getErrorMsg(field: any): string {
-    if (field.errors.required) {
-      return 'Last name is required';
+  getErrorMsg(fieldName: string): string {
+    const field = this.findOwnerForm.get(fieldName);
+
+    if (field) {
+      if (field.hasError('required')) {
+        return 'This field is required';
+      }
     }
+
     return '';
   }
 }
