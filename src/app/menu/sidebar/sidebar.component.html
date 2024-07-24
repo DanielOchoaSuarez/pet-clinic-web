@@ -8,10 +8,16 @@
 <mat-sidenav-container class="sidebar-container">
   <mat-sidenav #sidenav class="sidebar-nav" mode="side" opened>
     <mat-nav-list>
-      <a mat-list-item *ngFor="let item of listItems" [routerLink]="item.path">
-        <mat-icon>{{item.icon}}</mat-icon>
-        {{item.label}}
-      </a>
+      <ng-container *ngFor="let item of listItems">
+        <a mat-list-item [routerLink]="item.path" *ngIf="item.path">
+          <mat-icon>{{item.icon}}</mat-icon>
+          {{item.label}}
+        </a>
+        <a mat-list-item [href]="item.url" *ngIf="item.url">
+          <mat-icon>{{item.icon}}</mat-icon>
+          {{item.label}}
+        </a>
+      </ng-container>
     </mat-nav-list>
   </mat-sidenav>
 

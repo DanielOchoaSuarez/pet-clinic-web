@@ -84,9 +84,6 @@ export class FindOwnerComponent implements OnInit, AfterViewInit {
 
   onReset(): void {
     this.findOwnerForm.reset();
-    this.findOwnerForm.markAsPristine(); // Marcar el formulario como "pristine"
-    this.findOwnerForm.markAsUntouched(); // Marcar el formulario como "untouched"
-    this.findOwnerForm.updateValueAndValidity(); // Actualizar la validez del formulario
     this.printTable = false;
   }
 

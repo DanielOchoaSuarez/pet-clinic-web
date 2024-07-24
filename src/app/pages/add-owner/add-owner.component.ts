@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-owner',
@@ -45,6 +46,11 @@ export class AddOwnerComponent implements OnInit {
   onSubmit(): void {
     if (this.addOwnerForm.valid) {
       console.log('Form Submitted!', this.addOwnerForm.value);
+      Swal.fire({
+        title: 'Success!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+      });
     } else {
       console.log('Form not valid');
     }
