@@ -16,6 +16,8 @@ import { FindOwnerComponent } from './pages/find-owner/find-owner.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
